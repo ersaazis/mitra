@@ -11,6 +11,7 @@ class DashboardController extends CBController
     public function getIndex(){
         $data['penjualan']=DB::table('laporan_penjualan')->where('users_id',cb()->session()->id())->get([DB::raw('sum(jumlah) as jumlah')])->first()->jumlah;
         $user=DB::table('users')->find(cb()->session()->id());
+        $data['kode_kupon']=$user->kode_kupon;
         $data['komisi']=$user->money;
         $data['rekening']=$user->rekening;
         $data['no_rekening']=$user->no_rekening;
@@ -21,7 +22,7 @@ class DashboardController extends CBController
             $data['afiliasi']+=$penjualan*10000;
         }
         $data['pageIcon'] = "fa fa-dashboard";
-        $data['page_title'] = "Cara Mengupload Foto";
+        $data['page_title'] = "Dashboard Mitra";
         return view("dashboard", $data);
     }
 }

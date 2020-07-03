@@ -41,10 +41,14 @@
   <form action="<?php echo cb()->getAdminUrl('simpanrekening') ?>">
     <div class="box">
         <div class="box-header with-border">
-            <h3 class="box-title">Informasi Pembayaran</h3>
+            <h3 class="box-title">Informasi</h3>
         </div>
         <div class="box-body">
             <table class="table">
+                <tr>
+                    <th>Kode Kupon</th>
+                    <td> : {{$rekening}}</td>
+                </tr>
                 <tr>
                     <th>Rekening</th>
                     <td> : {{$rekening}}</td>
