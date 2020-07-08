@@ -47,7 +47,7 @@
             <table class="table">
                 <tr>
                     <th>Kode Kupon</th>
-                    <td> : {{$rekening}}</td>
+                    <td> : {{$kode_kupon}}</td>
                 </tr>
                 <tr>
                     <th>Rekening</th>
